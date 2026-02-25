@@ -1,0 +1,37 @@
+klayout (current)
+https://www.klayout.de/build.html
+
+requirements.txt
+https://github.com/IHP-GmbH/IHP-Open-PDK/blob/dev/requirements.txt
+
+pip install requirements.txt
+
+run DRC script
+https://github.com/IHP-GmbH/IHP-Open-PDK/blob/dev/ihp-sg13g2/libs.tech/klayout/tech/drc/run_drc.py
+
+run_drc.py --path=<file_path>
+            [--table=<table_name>]... [--mp=<num_cores>] [--run_dir=<run_dir_path>]
+            [--topcell=<topcell_name>] [--run_mode=<mode>] [--drc_json=<json_path>]
+            [--disable_extra_rules] [--no_feol] [--no_beol] [--no_density]
+            [--density_thr=<density_threads>] [--density_only] [--antenna]
+            [--antenna_only] [--no_offgrid]
+
+def set_default_options
+  {
+    'top_cell' =&gt; '',
+    'run_mode' =&gt; 'deep',
+    'table' =&gt; 'all',
+    'run_dir' =&gt; '',
+    'parallel_runs' =&gt; 1,
+    'density_thr' =&gt; 1,
+    'no_feol' =&gt; false,
+    'no_beol' =&gt; false,
+    'disable_extra_rules' =&gt; false,
+    'no_density' =&gt; true,
+    'density_only' =&gt; false,
+    'antenna' =&gt; false,
+    'antenna_only' =&gt; false,
+    'no_offgrid' =&gt; false,
+    'no_recommended' =&gt; false,
+  }
+end
